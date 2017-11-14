@@ -4,7 +4,9 @@ for dr in $(find . -name .latexmkrc | cat <(echo ".") - | xargs dirname | sort -
         d=$(realpath $dr) 
         bd=$(realpath build/$dr)
         pushd $d
-        mkdir $bd 
+        mkdir -p $bd 
+        echo $d
+        echo $bd
         latexmk -outdir=$bd "$@"
         popd
 done
