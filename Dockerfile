@@ -8,5 +8,5 @@ USER latex
 
 
 WORKDIR /data
-ENTRYPOINT ["latexmk"]
-CMD ["-help"]
+#ENTRYPOINT ["latexmk"]
+#CMD ["-help"]
